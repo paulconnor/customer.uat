@@ -13,12 +13,12 @@ stages {
     }
    stage('Deploy API to Test') {
         steps {
-            sh 'curl -X POST -d @swagger.json http://34.212.226.36:8080/deployToPortal -H "Content-Type: application/json"'     
+            sh 'curl -X POST -d @swagger.json http://13.237.12.95:8080/deployToPortal -H "Content-Type: application/json"'     
         }
     }
     stage('Build Tests') {
         steps {
-            sh 'curl -X POST -d @swagger.json -H "Content-Type: application/json" http://34.212.226.36:8080/buildBlazeTest > file.json'     
+            sh 'curl -X POST -d @swagger.json -H "Content-Type: application/json" http://13.237.12.95:8080/buildBlazeTest > file.json'     
         }
     }
     stage('Run Unit Tests ') {
