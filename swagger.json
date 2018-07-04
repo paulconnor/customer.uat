@@ -4,7 +4,7 @@
     "title": "Customer",
     "version": "v1"
   },
-  "host": "34.210.71.26:8081",
+  "host": "13.237.12.95:8282",
   "schemes": [
     "http"
   ],
