@@ -6,22 +6,9 @@ stages {
             checkout scm
         }
     }
-    stage('Build API Server') {
-        steps {
-            sh '/usr/local/bin/docker-compose -f docker-compose-mysql-4_1.yml up -d'
-            timeout(5) {
-               waitUntil {
-                  script {
-                     def r = sh script: 'wget -q http://34.210.71.26:8081/APICreator/#/ -O /dev/null', returnStatus: true
-                     return (r == 0);
-                  }
-               }
-           }
-        }
-    } 
     stage('Create API') {
         steps {
-            sh 'curl -X POST -d @input.schema http://34.212.226.36:8080/pushToLac -H "Content-Type: application/json"'
+            sh 'curl -X POST -d @input.schema http://13.237.12.95:8080/pushToLac -H "Content-Type: application/json"'
         }
     }
    stage('Deploy API to Test') {
