@@ -6,12 +6,14 @@ stages {
             checkout scm
         }
     }
+/*
     stage('Create API') {
         steps {
             sh 'curl -X POST -d @input.schema http://13.237.12.95:8080/pushToLac -H "Content-Type: application/json"'
         }
     }
-   stage('Deploy API to Test') {
+*/
+stage('Deploy API to Test') {
         steps {
             sh 'curl -X POST -d @swagger.json http://13.237.12.95:8080/deployToPortal -H "Content-Type: application/json"'     
         }
