@@ -1,0 +1,34 @@
+pipeline{
+agent any
+stages {
+    stage('Checkout code') {
+        steps {
+            checkout scm
+        }
+    }
+
+    stage('Create API') {
+        steps {
+          sleep 10 SECONDS
+        }
+    }
+
+    stage('Deploy API to Test') {
+        steps {
+          sleep 10 SECONDS
+        }
+    }
+    stage('Veracode Security checks') {
+        steps {
+          sleep 10 SECONDS
+        }
+    }
+    stage('Run Unit Tests ') {
+        steps {
+          sleep 10 SECONDS
+        }
+    }
+
+   
+}
+}
