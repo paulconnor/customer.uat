@@ -9,23 +9,23 @@ stages {
 
     stage('Create API') {
         steps {
-          sh 'sleep 10'
+          sh 'sleep 5'
         }
     }
 
     stage('Deploy API to Test') {
         steps {
-          sh 'sleep 10'
+          sh 'sleep 5'
         }
     }
     stage('Veracode Security checks') {
         steps {
-          sh 'sleep 10'
+          sh 'sleep 5'
         }
     }
     stage('Run Unit Tests ') {
         steps {
-          sh 'sleep 10'
+          sh 'sleep 5'
         }
     }
 
