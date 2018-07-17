@@ -9,18 +9,18 @@ stages {
 /*
     stage('Create API') {
         steps {
-            sh 'curl -X POST -d @input.schema http://13.237.12.95:8080/pushToLac -H "Content-Type: application/json"'
+            sh 'curl -X POST -d @input.schema http://52.64.115.85:8080/pushToLac -H "Content-Type: application/json"'
         }
     }
 */
 stage('Deploy API to Test') {
         steps {
-            sh 'curl -X POST -d @swagger.json http://13.237.12.95:8080/deployToPortal -H "Content-Type: application/json"'     
+            sh 'curl -X POST -d @swagger.json http://52.64.115.85:8080/deployToPortal -H "Content-Type: application/json"'     
         }
     }
     stage('Build Tests') {
         steps {
-            sh 'curl -X POST -d @swagger.json -H "Content-Type: application/json" http://13.237.12.95:8080/buildBlazeTest > file.json'     
+            sh 'curl -X POST -d @swagger.json -H "Content-Type: application/json" http://52.64.115.85:8080/buildBlazeTest > file.json'     
         }
     }
     stage('Run Unit Tests ') {
