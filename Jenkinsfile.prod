@@ -6,7 +6,7 @@ stages {
             checkout scm
         }
     }
-    stage('Secure API - Gateway') {
+    stage('Secure (Gateway)') {
         steps {
             sh 'curl -X POST -d @swagger.json http://52.64.115.85:18080/publishToProd -H "Content-Type: application/json"'
         }
@@ -23,12 +23,12 @@ stages {
            }
         }
     } */
-        stage('Enable Monitoring - Runscope') {
+        stage('Monitoring (Runscope)') {
         steps {
             sh 'curl -X POST -d @swagger.json -H "Content-Type: application/json" http://52.64.115.85:18080/enableRunscope'     
         }
     }
-    stage('Enable Management - Portal') {
+    stage('Analytics (Portal)') {
         steps {
             sh 'curl -X POST -d @swagger.json http://52.64.115.85:18080/enablePAPIM -H "Content-Type: application/json"'     
         }
