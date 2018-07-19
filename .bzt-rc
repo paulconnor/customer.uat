@@ -33,7 +33,7 @@ modules:
     token: ba2a5f2bbab9c93b28ae2e25:fc4615819c1ab3c2a32008a037b881237e2388618924ac95e7345b1478d61259dee12daf # API id and API secret joined with ':'
 
     test: Test for Lifecycle  # name for test to store reports
-    project: Lifecycle  # name for project to store test, can be numeric project ID
+    project: BuiltToChange  # name for project to store test, can be numeric project ID
     public-report: false  # set to true to create a public link to the report
 
     browser-open: none  # auto-open the report in browser,
