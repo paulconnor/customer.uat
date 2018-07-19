@@ -6,7 +6,7 @@ stages {
             checkout scm
         }
     }
-    stage('Secure (Gateway)') {
+    stage('Deploy API to Prod') {
         steps {
             sh 'curl -X POST -d @swagger.json http://52.64.115.85:18080/publishToProd -H "Content-Type: application/json"'
         }
